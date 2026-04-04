@@ -8,11 +8,11 @@ A shell script that renders a real-time Claude Code status line in your terminal
 
 ```
 Project   develop   Sonnet 4.6   ctx ▊▊▊▊▊▊▊▊ 60%   5h ▊▊▊▊▊▊▊▊ 9%   7d ▊▊▊▊▊▊▊▊ 26%
-  │          │           │             │                    │                  │
-  │          │           │             │                    │                  └─ 7-day token usage
-  │          │           │             │                    └─ 5-hour token usage
-  │          │           │             └─ Context window usage
-  │          │           └─ Model name
+  │          │          │               │                 │               │
+  │          │          │               │                 │               └─ 7-day token usage
+  │          │          │               │                 └─ 5-hour token usage
+  │          │          │               └─ Context window usage
+  │          │          └─ Model name
   │          └─ Git branch (omitted if not in a repo)
   └─ Current working directory
 ```

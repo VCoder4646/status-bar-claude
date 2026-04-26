@@ -47,8 +47,9 @@ build_bar() {
 format_reset_time() {
   local epoch=$1
   local hhmm
-  hhmm=$(date -r "$epoch" "+%-I:%M %p" 2>/dev/null || date -d "@$epoch" "+%-I:%M %p" 2>/dev/null)
+  hhmm=$(date -r "$epoch" "+%l:%M %p" 2>/dev/null || date -d "@$epoch" "+%l:%M %p" 2>/dev/null)
   [ -z "$hhmm" ] && return 1
+  hhmm="${hhmm# }"
   local hour=${hhmm%%:*}
   local rest=${hhmm#*:}
   local mins=${rest%% *}
